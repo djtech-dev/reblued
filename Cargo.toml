@@ -3,8 +3,9 @@ name = "reblued"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-dbus = "0.9.7"
-hciraw = "1.0.1"
+dbus = { version="0.9", optional=true }
+hciraw = "1.0"
+
+[features]
+dbus_support = ["dbus"]
